@@ -1,0 +1,52 @@
+.meal {
+    position: relative;
+    height: 100%;
+
+    &__img {
+        height: (500 / 16) * 1rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__captions {
+        position: absolute;
+        color: white; 
+        padding: 2.5em 1.5em;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(black, 0.7);
+        opacity: 0.9;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-top: 0;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 2em;
+    }
+
+    @include mq(big) {
+        &__captions {
+            visibility: hidden;
+            opacity: 0;
+            // transform: translateY(100%);
+            bottom: -30%;
+            transition: all .3s ease-out;
+            overflow: hidden;
+        }
+
+        &__img {
+            height: 100%; 
+        }
+
+        &:hover &__captions {
+            visibility: visible;
+            opacity: 1;
+            bottom: 0;
+            // transform: translateY(0);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@function gray($shadeLevel: 4) {
+    @if type-of($shadeLevel) != number or $shadeLevel < 1 or $shadeLevel > 5 {
+        @error 'shade level of gray() must be number between 1 and 5, yours is `#{$shadeLevel}`';
+    } @else {
+        @return map-get($grays, $shadeLevel);
+    }
+}
+
+@function fw($level) {
+    @if $level != light and $level != normal and $level != bold {
+        @error 'level of font weight must be `light`, `normal` or `bold`. Yours is `#{$level}`';
+    } @else {
+        @return map-get($fontWeights, $level);
+    }
+}

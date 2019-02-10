@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 3em 2em; 
+
+    &__sub-heading {
+        @include lineAfter();
+
+        .section--meals & {
+            @include lineAfter($bg: gray(3));
+        }
+    }
+}
+
+

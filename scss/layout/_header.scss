@@ -1,0 +1,17 @@
+
+.header {
+    position: relative;
+    background: {
+        image: linear-gradient(rgba(black, .4), rgba(black, .4)), url(../images/header.jpeg);
+        size: cover
+    }
+    height: 85vh;
+    opacity: 0.8;
+
+    &__title {
+        @include centerAbsolute();
+        width: 100%;
+        padding: 0 1em;
+    }
+}
+

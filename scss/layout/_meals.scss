@@ -1,0 +1,18 @@
+.section {
+    &--meals {
+        background: {
+            image: linear-gradient(rgba(white, .2), rgba(white, .2)), url(../images/meals-bg.jpeg);
+        };
+    }
+}
+
+.meals {
+    @include limitWidthNormalScreen();
+
+    @include mq(big) {
+        @include limitWidthBigScreen();
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: $spacer;
+    } 
+}

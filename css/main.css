@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:300,400,900");
 html {
   line-height: 1.15;
   /* 1 */
@@ -302,3 +303,308 @@ template {
    */
 [hidden] {
   display: none; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.section {
+  padding: 3em 2em; }
+  .section__sub-heading::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #5d5d5d;
+    margin: 1.5em auto; }
+  .section--meals .section__sub-heading::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #9d9d9d;
+    margin: 1.5em auto; }
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 100%;
+  line-height: 1.6;
+  font-weight: 300; }
+
+body {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #5d5d5d;
+  font-family: "Lato", sans-serif;
+  line-height: 1; }
+  @media only screen and (min-width: 860px) {
+    body {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #5d5d5d;
+      font-family: "Lato", sans-serif;
+      line-height: 1.125; } }
+
+h3 {
+  font-size: 1.3125rem;
+  line-height: 1.2;
+  margin-top: 2em;
+  margin-bottom: 0.5em; }
+
+.section__heading {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #f55d3e;
+  font-family: "Abril Fatface", cursive;
+  line-height: 1;
+  text-align: center; }
+  @media only screen and (min-width: 860px) {
+    .section__heading {
+      font-size: 3.75rem; } }
+  .section--testimonials .section__heading {
+    margin-bottom: 1em; }
+  .section__heading--accent {
+    color: #fff; }
+
+.section__sub-heading {
+  font-size: 1.68rem;
+  font-weight: 400;
+  color: #9d9d9d;
+  font-family: "Lato", sans-serif;
+  line-height: 1.1;
+  margin-top: 1em;
+  text-transform: uppercase;
+  text-align: center; }
+
+.page-heading {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #fff;
+  font-family: "Abril Fatface", cursive;
+  line-height: 1.2;
+  text-align: center; }
+  @media only screen and (min-width: 860px) {
+    .page-heading {
+      font-size: 5rem; } }
+
+.header {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/header.jpeg);
+  background-size: cover;
+  height: 85vh;
+  opacity: 0.8; }
+  .header__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 1em; }
+
+.section--meals {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../images/meals-bg.jpeg); }
+
+@media only screen and (min-width: 500px) {
+  .meals {
+    max-width: 450px;
+    margin: 0 auto; } }
+
+@media only screen and (min-width: 860px) {
+  .meals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2em; } }
+  @media only screen and (min-width: 860px) and (min-width: 500px) {
+    .meals {
+      max-width: 1200px;
+      margin: 0 auto; } }
+
+.footer {
+  background: #212121;
+  color: #9d9d9d;
+  padding: 6em 4em;
+  text-align: center; }
+  .footer > *:not(:last-child) {
+    margin-bottom: 1em; }
+
+.section--interestings {
+  padding-bottom: 4em; }
+
+.interestings {
+  text-align: center; }
+  @media only screen and (min-width: 500px) {
+    .interestings {
+      max-width: 450px;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 860px) {
+    .interestings {
+      display: flex; } }
+  @media only screen and (min-width: 860px) and (min-width: 500px) {
+    .interestings {
+      max-width: 1200px;
+      margin: 0 auto; } }
+
+@media only screen and (min-width: 500px) {
+  .testimonials {
+    max-width: 450px;
+    margin: 0 auto; } }
+
+@media only screen and (min-width: 860px) {
+  .testimonials {
+    display: flex; } }
+  @media only screen and (min-width: 860px) and (min-width: 500px) {
+    .testimonials {
+      max-width: 1200px;
+      margin: 0 auto; } }
+
+.about {
+  text-align: center; }
+  .about__img {
+    height: 18.75rem;
+    width: 100%;
+    object-fit: cover; }
+  .about__title {
+    text-transform: uppercase; }
+  .about__desc:not(:last-of-type) {
+    margin-bottom: 2em; }
+  @media only screen and (min-width: 500px) {
+    .about__desc {
+      max-width: 450px;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 860px) {
+    .about {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2em; } }
+  @media only screen and (min-width: 860px) and (min-width: 500px) {
+    .about {
+      max-width: 1200px;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 860px) {
+      .about .section__heading,
+      .about .section__sub-heading, .about__title, .about__desc {
+        grid-column: 2 / 3; }
+      .about__title {
+        margin: 0 0 1em 0; }
+      .about__desc {
+        text-align: left; }
+      .about__img {
+        grid-row: 1 / 6;
+        height: 31.25rem;
+        transform: translateY(-20%); }
+      .about .section__sub-heading::after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1px;
+        background-color: #5d5d5d;
+        margin: 1em auto; } }
+
+.nav {
+  padding: 2em 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  @media only screen and (min-width: 860px) {
+    .nav {
+      max-width: 37.5rem;
+      left: 50%;
+      transform: translateX(-50%); } }
+  .nav__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center; }
+  .nav__item {
+    min-width: 106px;
+    text-align: center; }
+    .nav__item--logo {
+      display: none; }
+      @media only screen and (min-width: 500px) {
+        .nav__item--logo {
+          display: inline-block; } }
+  .nav__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    font-family: "Abril Fatface", cursive;
+    line-height: 1; }
+  .nav__logo {
+    width: 100px; }
+
+.testimonial {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+  text-align: center; }
+  .testimonial__img {
+    height: 18.75rem;
+    width: 100%;
+    object-fit: cover; }
+  .testimonial__desc {
+    padding: 2em; }
+  .testimonial__footer {
+    background: #f3f3f3;
+    padding: 2em 0; }
+  .testimonial__name {
+    margin: 0; }
+    .testimonial__name::after {
+      content: '';
+      display: block;
+      width: 20%;
+      height: 1px;
+      background-color: #9d9d9d;
+      margin: 0.5em auto; }
+  .testimonial__position {
+    font-size: .8rem; }
+  .testimonial:not(:last-of-type) {
+    margin-bottom: 2em; }
+  @media only screen and (min-width: 860px) {
+    .testimonial {
+      height: 100%; }
+      .testimonial + .testimonial {
+        margin-left: 2em; } }
+
+@media only screen and (min-width: 860px) {
+  .interesting + .interesting {
+    margin-left: 2em; }
+  .interesting__title {
+    margin-top: 0; } }
+
+.meal {
+  position: relative;
+  height: 100%; }
+  .meal__img {
+    height: 31.25rem;
+    width: 100%;
+    object-fit: cover; }
+  .meal__captions {
+    position: absolute;
+    color: white;
+    padding: 2.5em 1.5em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0.9; }
+  .meal__title {
+    text-transform: uppercase;
+    margin-top: 0; }
+  .meal:not(:last-of-type) {
+    margin-bottom: 2em; }
+  @media only screen and (min-width: 860px) {
+    .meal__captions {
+      visibility: hidden;
+      opacity: 0;
+      bottom: -30%;
+      transition: all .3s ease-out;
+      overflow: hidden; }
+    .meal__img {
+      height: 100%; }
+    .meal:hover .meal__captions {
+      visibility: visible;
+      opacity: 1;
+      bottom: 0; } }

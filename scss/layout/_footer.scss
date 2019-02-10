@@ -1,0 +1,10 @@
+.footer {
+    background: gray(5);
+    color: gray(3);
+    padding: 6em 4em;
+    text-align: center;
+
+    & > *:not(:last-child) {
+        margin-bottom: 1em;
+    }
+}

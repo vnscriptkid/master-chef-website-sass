@@ -1,0 +1,13 @@
+.section--interestings {
+    padding-bottom: 4em;
+}
+
+.interestings {
+    text-align: center;    
+    @include limitWidthNormalScreen();
+    
+    @include mq(big) {
+        @include limitWidthBigScreen();
+        display: flex;
+    }
+}

@@ -1,19 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="build/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="build/main.css">
-    <title>BoilerPlate</title>
+    <title>Master Chef</title>
 </head>
+
 <body>
-    <h1>First instructions</h1>
-    <ul>
-        <li>Install gulp globally: <code>npm install gulp-cli -g </code></li>
-        <li>Install dependencies locally: <code>npm install</code></li>
-        <li>Start your project: <code>npm run dev</code></li>
-    </ul>
+    <header class="header" id="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+                <li class="nav__item nav__item--logo"><a href="#home"><img class="nav__logo" src="images/logo.png" alt="LOGO"></a></li>
+                <li class="nav__item"><a class="nav__link" href="#meals">Meals</a></li>
+                <li class="nav__item"><a class="nav__link" href="#testimonial">Testimonial</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="page-heading header__title">Homecooked meals <p>delivered straight to your door</p>
+        </h1>
+    </header>
+
+    <section class="section section--about about">
+        <h2 class="section__heading">This is a nice big title</h2>
+        <p class="section__sub-heading">This is a subhead which mentions some interesting things</p>
+        <!-- <div class="about"> -->
+            <img src="images/about.jpeg" alt="ABOUT IMG" class="about__img">
+            <h3 class="about__title">This introduces the following text</h3>
+            <p class="about__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus exercitationem
+                repellat amet doloribus temporibus, corporis rerum numquam blanditiis cumque id praesentium ut, expedita
+                ea minima perferendis ipsum cupiditate soluta iure molestias fuga. In ut eius dolorum sunt laborum,
+                quasi, numquam itaque corporis temporibus, vitae labore! Aspernatur hic cumque dolore repudiandae.</p>
+
+            <p class="about__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, quas nesciunt omnis
+                pariatur voluptatibus eveniet et ratione laborum dolorum facere porro accusamus corrupti, dicta
+                asperiores voluptates aperiam ipsam doloribus harum?</p>
+        <!-- </div> -->
+    </section>
+
+    <section class="section section--interestings">
+        <h2 class="section__heading">Some interesting things</h2>
+        <p class="section__sub-heading">This is a subhead which mentions some interesting things</p>
+        <div class="interestings">
+            <div class="interesting">
+                <h3 class="interesting__title">This is a subtitle</h3>
+                <div class="interesting__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quod
+                    odio mollitia animi hic fugiat exercitationem. Tempore rem dolores aliquam?</div>
+            </div>
+
+            <div class="interesting">
+                <h3 class="interesting__title">This is a subtitle</h3>
+                <div class="interesting__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quod
+                    odio mollitia animi hic fugiat exercitationem. Tempore rem dolores aliquam?</div>
+            </div>
+
+            <div class="interesting">
+                <h3 class="interesting__title">This is a subtitle</h3>
+                <div class="interesting__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quod
+                    odio mollitia animi hic fugiat exercitationem. Tempore rem dolores aliquam?</div>
+            </div>
+
+            <div class="interesting">
+                <h3 class="interesting__title">This is a subtitle</h3>
+                <div class="interesting__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quod
+                    odio mollitia animi hic fugiat exercitationem. Tempore rem dolores aliquam?</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--meals">
+        <h2 class="section__heading section__heading--accent">Some of our meals</h2>
+        <p class="section__sub-heading">This is a subhead which mentions some interesting things</p>
+        <div class="meals">
+            <figure class="meal">
+                <img class="meal__img" src="images/meal-1.jpeg" alt="MEAL_1">
+                <figcaption class="meal__captions">
+                    <h3 class="meal__title">About this meal</h3>
+                    <p class="meal__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum officia
+                        consequuntur dolorem?</p>
+                </figcaption>
+            </figure>
+
+            <figure class="meal">
+                <img class="meal__img" src="images/meal-2.jpeg" alt="MEAL_2">
+                <figcaption class="meal__captions">
+                    <h3 class="meal__title">About this meal</h3>
+                    <p class="meal__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum officia
+                        consequuntur dolorem?</p>
+                </figcaption>
+            </figure>
+
+            <figure class="meal">
+                <img class="meal__img" src="images/meal-3.jpeg" alt="MEAL_3">
+                <figcaption class="meal__captions">
+                    <h3 class="meal__title">About this meal</h3>
+                    <p class="meal__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum officia
+                        consequuntur dolorem?</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section section--testimonials">
+        <h2 class="section__heading">What our clients are saying about us</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="images/test-1.jpeg" alt="TEST_1" class="testimonial__img">
+                <div class="testimonial__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur alias
+                    soluta corrupti, repellendus exercitationem repudiandae vero excepturi, error asperiores perferendis
+                    sunt? Quod ipsa, dolorem numquam magnam, mollitia aperiam non animi placeat, nisi necessitatibus
+                    facilis maxime nam deserunt in nihil perspiciatis!</div>
+                <div class="testimonial__footer">
+                    <h3 class="testimonial__name">John Deer</h3>
+                    <div class="testimonial__position">Manager at FoodCo.</div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <img src="images/test-2.jpeg" alt="TEST_2" class="testimonial__img">
+                <div class="testimonial__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur alias
+                    soluta corrupti, repellendus exercitationem repudiandae vero excepturi, error asperiores perferendis
+                    sunt? Quod ipsa, dolorem numquam magnam, mollitia aperiam non animi placeat, nisi necessitatibus
+                    facilis maxime nam deserunt in nihil perspiciatis!</div>
+                <div class="testimonial__footer">
+                    <h3 class="testimonial__name">Samantha McKenzie</h3>
+                    <div class="testimonial__position">Manager at FoodCo.</div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <img src="images/test-3.jpeg" alt="TEST_3" class="testimonial__img">
+                <div class="testimonial__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur alias
+                    soluta corrupti, repellendus exercitationem repudiandae vero excepturi, error asperiores perferendis
+                    sunt? Quod ipsa, dolorem numquam magnam, mollitia aperiam non animi placeat, nisi necessitatibus
+                    facilis maxime nam deserunt in nihil perspiciatis!</div>
+                <div class="testimonial__footer">
+                    <h3 class="testimonial__name">Patricia Lalonde</h3>
+                    <div class="testimonial__position">Manager at FoodCo.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>A good place for some basic footer information</p>
+        <p>&copy;2019 Personal Chef Services</p>
+        <p>415 C2 Tran Phu, Ba Dinh, Ha Noi</p>
+    </footer>
+
 </body>
+
 </html>

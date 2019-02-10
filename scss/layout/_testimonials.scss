@@ -1,0 +1,14 @@
+.section {
+    &--testimonials {
+        
+    }
+}
+
+.testimonials {
+    @include limitWidthNormalScreen();
+    
+    @include mq(big) {
+        @include limitWidthBigScreen();
+        display: flex;
+    }
+}

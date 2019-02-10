@@ -1,0 +1,50 @@
+@mixin font($fs, $fw: fw(light), $color: gray(4), $ff: $ff-ss, $lh: 1) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+    font-family: $ff;
+    line-height: $lh;
+}
+
+@mixin centerAbsolute() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin lineAfter($width: 50%, $height: 1px, $bg: gray(4), $my: 1.5em) {
+    &::after {
+        content: '';
+        display: block;
+        width: $width;
+        height: $height;
+        background-color: $bg;
+        margin: $my auto;
+    }
+}
+
+@mixin mq($bp) {
+    @if $bp != normal and $bp != big {
+        @error 'breakpoint argument of md() must be normal or big. Yours is `#{$bp}`';
+    } @else {
+        $size: map-get($map: $breakpoints, $key: $bp);
+        @media only screen and (min-width: $size) {
+            @content;
+        }
+    }
+}
+
+@mixin limitWidthNormalScreen() {
+    @include mq(normal) {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+
+@mixin limitWidthBigScreen() {
+    @include mq(normal) {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

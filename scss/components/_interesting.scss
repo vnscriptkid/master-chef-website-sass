@@ -1,0 +1,11 @@
+.interesting {
+    @include mq(big) {
+        & + & {
+            margin-left: $spacer;
+        }
+
+        &__title {
+            margin-top: 0;
+        }
+    }
+}

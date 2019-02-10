@@ -1,0 +1,53 @@
+.about {
+    text-align: center;
+    
+    &__img {
+        height: (300 / 16) * 1rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        &:not(:last-of-type) {
+            margin-bottom: 2em;
+        }
+
+        @include limitWidthNormalScreen();
+    }
+
+    @include mq(big) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: $spacer;
+        @include limitWidthBigScreen();
+        
+        .section__heading,
+        .section__sub-heading,
+        &__title,
+        &__desc {
+            grid-column: 2 / 3;
+        }
+
+        &__title {
+            margin: 0 0 (0.5 * $spacer) 0;
+        }
+
+        &__desc {
+            text-align: left;
+        }
+
+        &__img {
+            grid-row: 1 / 6;
+            height: (500 / 16) * 1rem;
+            transform: translateY(-20%);
+        }
+
+        .section__sub-heading {
+            @include lineAfter($my: 1em);
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.nav {
+    padding: 2em 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    @include mq(big) {
+        max-width: (600 / 16) * 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    &__list {
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+
+    &__item {
+        &--logo {
+            display: none;
+
+            @include mq(normal) {
+                display: inline-block;
+            }
+        }
+        min-width: 106px;
+        text-align: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        @include font(1.2rem, fw(normal), gray(1), $ff-serif);
+    }
+
+    &__logo {
+        width: 100px;
+    }
+}
+

@@ -1,0 +1,44 @@
+@mixin bs() {
+    box-shadow: 0 0 1rem 0 rgba(black, 0.3);
+}
+
+.testimonial {
+    @include bs();
+    text-align: center;
+    
+    &__img {
+        height: (300 / 16) * 1rem;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    &__desc {
+        padding: 2em;
+    }
+    
+    &__footer {
+        background: gray(2);
+        padding: 2em 0;
+    }
+
+    &__name {
+        margin: 0;
+        @include lineAfter(20%, 1px, gray(3), .5em);
+    }
+
+    &__position {
+        font-size: .8rem;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 2em;
+    }
+
+    @include mq(big) {
+        height: 100%;
+        
+        & + & {
+            margin-left: $spacer;
+        }
+    }
+}
